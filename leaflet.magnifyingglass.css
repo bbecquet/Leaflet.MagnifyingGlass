@@ -1,0 +1,12 @@
+.leaflet-magnifying-glass {
+  border-radius: 50%; /* Bug in Webkit :( */
+  border: 1px solid gray;
+  box-shadow: 0 0 5px gray;
+  position: absolute;
+  overflow: hidden;
+}
+
+.leaflet-magnifying-glass > .leaflet-container {
+  height: 100%;
+  width: 100%;
+}
