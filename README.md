@@ -4,9 +4,16 @@ Leaflet Magnifying Glass
 This plugin allows you to add a "magnifying glass" effect to a Leaflet map, able to display a portion of the map in a different zoom (and actually display different content).
 It can be configured to follow the mouse movement on the main map, for a real zooming glass effect, or set to a fixed on the map.
 
-__In its current version, due to a rendering bug in Webkit, the default round look of the magnifying glass doesn't work correctly on Webkit-based browsers (Chromium/Chrome, Safari, Opera). :( The round look can be replaced__
-
 The plugin implements `L.ILayer`, and the magnified view is itself a true Leaflet map object.
+
+Support
+-------
+
+Works with Leaflet >= 0.6, on Firefox 25+ and IE 9+.
+
+### Note about Webkit browsers
+
+The plugin "works" on Webkit-based browsers (Chromium/Chrome, Safari, Opera), but sadly, [due to a rendering bug in Webkit](https://bugs.webkit.org/show_bug.cgi?id=30475), the default round look of the magnifying glass can't be achieved properly. It's possible to cancel this effect by removing the `border-radius` rule in the CSS, in this case the magnifying glass will be square.
 
 Screenshot
 ----------
