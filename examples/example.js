@@ -27,7 +27,7 @@ function init() {
     map.removeLayer(magnifyingGlass);
   })
 
-  // ...an reappear on right click
+  // ...and reappear on right click
   map.on('contextmenu', function(mouseEvt) {
     if(map.hasLayer(magnifyingGlass)) {
       return;
