@@ -65,12 +65,12 @@ var magnifyingGlass = L.magnifyingGlass({
 
 | Option          |  Type       | Default   | Description |
 | ---             | ---         | ---       | --- |
-| `radius`        | `Integer`   | `100`     | Defines the radius of the magnifying glass, in pixels. |
-| `zoomOffset`    | `Integer`   | `3`       | Defines the number of zoom levels added to the main map current zoom level by the magnifying effect. 0 for always using the same zoom. |
-| `fixedZoom`     | `Integer`   | `-1`      | If different than '-1', defines a fixed zoom level to always use in the magnifying glass, ignoring the `zoomOffet` value. |
-| `fixedPosition` | `Boolean`   | `false`   | If `true`, the magnifying glass will stay at the same position on the map, not following the mouse cursor on the main map. |
-| `latLng`        | `LatLng`    | `[0, 0]`  | If `fixed` is set to `true`, defines the center of the magnifying glass, both on the main map and regarding the mini map displayed in the glass. |
-| `layers`        | `ILayer[]`  | `[]`      | Set of layers to display in the magnified view. |
+| `radius`        | `Integer`   | `100`     | The radius of the magnifying glass, in pixels. |
+| `zoomOffset`    | `Integer`   | `3`       | The zoom level offset between the main map zoom and the magnifying glass. |
+| `fixedZoom`     | `Integer`   | `-1`      | If different than `-1`, defines a fixed zoom level to always use in the magnifying glass, ignoring the main map zoom and the `zoomOffet` value. |
+| `fixedPosition` | `Boolean`   | `false`   | If `true`, the magnifying glass will stay at the same position on the map, not following the mouse cursor. |
+| `latLng`        | `LatLng`    | `[0, 0]`  | The initial position of the magnifying glass, both on the main map and as the center of the magnified view. If `fixedPosition` is `true`, it will always keep this position. |
+| `layers`        | `ILayer[]`  | `[]`      | Set of layers to display in the magnified view. These layers  shouldn't be already added to a map instance (see note above). |
 
 ### Methods
 
