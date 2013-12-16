@@ -11,11 +11,9 @@ See it in action:
 Support
 -------
 
-Works with Leaflet >= 0.6, on Firefox 25+ and IE 9+.
+Works with Leaflet >= 0.6, tested on Firefox 25, IE 9, Chrome/-ium 29, Safari 5, Opera 17.
 
-### Note about Webkit browsers
-
-The plugin "works" on Webkit-based browsers (Chromium/Chrome, Safari, Opera), but sadly, [due to a rendering bug in Webkit](https://bugs.webkit.org/show_bug.cgi?id=30475), the default round look of the magnifying glass can't be achieved properly. It's possible to cancel this effect by removing the `border-radius` rule in the CSS, in this case the magnifying glass will be square.
+Not tested yet on mobile browsers.
 
 Screenshot
 ----------

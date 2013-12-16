@@ -91,9 +91,15 @@ L.MagnifyingGlass = L.Class.extend({
   */
   onAdd: function(map) {
     this._mainMap = map;
+    // create a wrapper element and a container for the map inside it
     this._wrapperElt = L.DomUtil.create('div', 'leaflet-magnifying-glass');
-    var _glassMapElt = L.DomUtil.create('div', '', this._wrapperElt);
-    this._glassMap = this._createMiniMap(_glassMapElt);
+    var glassMapElt = L.DomUtil.create('div', '', this._wrapperElt);
+    // Webkit border-radius clipping workaround (see CSS)
+    if(L.Browser.webkit)
+      L.DomUtil.addClass(glassMapElt, 'leaflet-magnifying-glass-webkit');
+    // build the map
+    this._glassMap = this._createMiniMap(glassMapElt);
+
     // forward some DOM events as Leaflet events
     L.DomEvent.addListener(this._wrapperElt, 'click', this._fireClick, this);
 

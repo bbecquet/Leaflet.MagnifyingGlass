@@ -1,5 +1,5 @@
 .leaflet-magnifying-glass {
-  border-radius: 50%; /* Bug in Webkit :( */
+  border-radius: 50%;
   border: 1px solid gray;
   box-shadow: 0 0 5px gray;
   position: absolute;
@@ -9,4 +9,11 @@
 .leaflet-magnifying-glass > .leaflet-container {
   height: 100%;
   width: 100%;
+}
+
+/* Webkit-only workaround for the border-radius clipping bug,
+applied to the map container */
+.leaflet-magnifying-glass-webkit {
+  border-radius: 50%;
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
 }
