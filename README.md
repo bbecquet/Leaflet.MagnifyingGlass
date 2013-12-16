@@ -47,10 +47,10 @@ Leaflet layer objets can't be shared between maps. So, __don't re-use layer obje
 // Share the same tile url...
 var tileUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 // but use two independant TileLayer objects
-var mapTiles = L.TileLayer(tileUrl),
-    magnifiedTiles = L.TileLayer(tileUrl);
+var mapTiles = L.tileLayer(tileUrl),
+    magnifiedTiles = L.tileLayer(tileUrl);
 
-var map = new L.Map('map', {
+var map = L.map('map', {
     center: [0, 0],
     zoom: 5,
     layers: [ mapTiles ]
