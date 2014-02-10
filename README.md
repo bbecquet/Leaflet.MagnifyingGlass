@@ -6,6 +6,7 @@ This plugin allows you to add a "magnifying glass" effect to a Leaflet map, able
 See it in action:
 
 * [Default behavior, following mouse movement](http://bbecquet.github.io/Leaflet.MagnifyingGlass/examples/example.html)
+* [Activated with a control button](http://bbecquet.github.io/Leaflet.MagnifyingGlass/examples/example_button.html)
 * [Multiple fixed glasses, with different map looks](http://bbecquet.github.io/Leaflet.MagnifyingGlass/examples/example_multi.html)
 
 Support
@@ -87,3 +88,4 @@ Authors
 -------
 
 * [Benjamin Becquet](https://github.com/bbecquet)
+* [Mathieu Peltier](https://github.com/mpeltier)
