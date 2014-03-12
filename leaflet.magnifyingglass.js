@@ -1,5 +1,4 @@
-﻿
-L.MagnifyingGlass = L.Class.extend({
+L.MagnifyingGlass = L.Layer.extend({
   includes: L.Mixin.Events,
 
   options: {
@@ -155,7 +154,20 @@ L.MagnifyingGlass = L.Class.extend({
   Shortcut to mimic common layer types' way of adding to the map
   */
   addTo: function(map) {
-    map.addLayer(this);
+    var id = L.stamp(this);
+		if (map._layers[id]) { return this; }
+		map._layers[id] = this;
+
+		this._zoomAnimated = map._zoomAnimated;
+
+		if (this.beforeAdd) {
+			this.beforeAdd(map);
+		}
+
+		this._mapToAdd = map;
+		map.whenReady(this._layerAdd, this);
+
+		return this;
   },
 });
 
