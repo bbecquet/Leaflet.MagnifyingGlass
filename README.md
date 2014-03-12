@@ -11,10 +11,15 @@ See it in action:
 
 Support
 -------
-
 Works with Leaflet >= 0.6, tested on Firefox 25, IE 9, Chrome/-ium 29, Safari 5, Opera 17.
 
 Not tested yet on mobile browsers.
+
+### Compatibility with Leaflet versions
+
+The development version of the plugin (on the `master` branch) is now targeted at the dev version of Leaflet (0.8), which includes some API breaking changes.
+
+For a version of the plugin compatible with the latest stable Leaflet release, use the `leaflet-0.7.2` branch.
 
 Screenshot
 ----------
