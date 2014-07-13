@@ -4,11 +4,13 @@
   box-shadow: 0 0 5px gray;
   position: absolute;
   overflow: hidden;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .leaflet-magnifying-glass > .leaflet-container {
-  height: 100%;
-  width: 100%;
+  height: 	100%;
+  width: 	100%;
 }
 
 /* Webkit-only workaround for the border-radius clipping bug,
