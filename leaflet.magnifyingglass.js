@@ -1,5 +1,7 @@
 ﻿
-L.MagnifyingGlass = L.Layer.extend({
+L.MagnifyingGlass = L.Class.extend({
+  includes: L.Mixin.Events,
+
   options: {
     radius: 100,
     zoomOffset: 3,
@@ -147,6 +149,13 @@ L.MagnifyingGlass = L.Layer.extend({
     L.DomEvent.removeListener(this._wrapperElt, 'click', this._fireClick);
     map.getPanes().popupPane.removeChild(this._wrapperElt);
     this._mainMap = null;
+  },
+
+  /**
+  Shortcut to mimic common layer types' way of adding to the map
+  */
+  addTo: function(map) {
+    map.addLayer(this);
   }
 });
 

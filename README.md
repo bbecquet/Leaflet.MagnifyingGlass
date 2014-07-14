@@ -17,9 +17,9 @@ Not tested yet on mobile browsers.
 
 ### Compatibility with Leaflet versions
 
-The development version of the plugin (on the `master` branch) is now targeted at the dev version of Leaflet (0.8), which includes some API breaking changes.
+This version of the plugin (`leaflet-0.7.2` branch) is compatible with the latest stable Leaflet release.
 
-For a version of the plugin compatible with the latest stable Leaflet release, use the `leaflet-0.7.2` branch.
+The development version of the plugin (on the `master` branch) is now targeted at the dev version of Leaflet (0.8), which includes some API breaking changes.
 
 Screenshot
 ----------
