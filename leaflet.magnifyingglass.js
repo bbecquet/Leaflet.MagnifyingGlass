@@ -1,5 +1,5 @@
 ﻿
-L.MagnifyingGlass = L.Layer.extend({
+L.MagnifyingGlass = L.Class.extend({
   options: {
     radius: 100,
     zoomOffset: 3,
@@ -125,7 +125,12 @@ L.MagnifyingGlass = L.Layer.extend({
     // needed after the element has been added, otherwise tile loading is messy
     this._glassMap.invalidateSize();
   },
-
+  
+  addTo: function(map) {
+        map.addLayer(this);
+        return this;
+    },
+    
   _fireClick: function(domMouseEvt) {
     this.fire('click', domMouseEvt);
     L.DomEvent.stopPropagation(domMouseEvt);
