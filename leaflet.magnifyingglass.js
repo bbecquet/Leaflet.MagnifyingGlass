@@ -124,6 +124,8 @@ L.MagnifyingGlass = L.Layer.extend({
 
     // needed after the element has been added, otherwise tile loading is messy
     this._glassMap.invalidateSize();
+
+    return this;
   },
 
   _fireClick: function(domMouseEvt) {
@@ -147,6 +149,8 @@ L.MagnifyingGlass = L.Layer.extend({
     L.DomEvent.removeListener(this._wrapperElt, 'click', this._fireClick);
     map.getPanes().popupPane.removeChild(this._wrapperElt);
     this._mainMap = null;
+
+    return this;
   }
 });
 
