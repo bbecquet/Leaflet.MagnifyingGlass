@@ -74,7 +74,7 @@ L.MagnifyingGlass = L.Layer.extend({
   _update: function(latLng, layerPoint) {
     // update mini map view, forcing no animation
     this._glassMap.setView(latLng, this._getZoom(), {
-      pan : { animate: false } 
+      pan : { animate: false }
     });
 
     // update the layer element position on the main map,
