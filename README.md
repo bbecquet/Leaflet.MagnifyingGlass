@@ -11,15 +11,11 @@ See it in action:
 
 Support
 -------
-Works with Leaflet >= 0.6, tested on Firefox 25, IE 9, Chrome/-ium 29, Safari 5, Opera 17.
+The development version of the plugin (on the `master` branch) is targeted at the 1.* version of Leaflet.
 
-Not tested yet on mobile browsers.
+For a version of the plugin compatible with the 0.7.* Leaflet releases, use the `leaflet-0.7.2` branch.
 
-### Compatibility with Leaflet versions
-
-The development version of the plugin (on the `master` branch) is now targeted at the dev version of Leaflet (0.8), which includes some API breaking changes.
-
-For a version of the plugin compatible with the latest stable Leaflet release, use the `leaflet-0.7.2` branch.
+Not tested on mobile browsers.
 
 Screenshot
 ----------
@@ -41,9 +37,9 @@ var magnifyingGlass = L.magnifyingGlass({
 map.addLayer(magnifyingGlass);
 ```
 
-### Inner layers 
+### Inner layers
 
-For it to display something, you need to pass layers to the constructor. You can simply give a `L.TileLayer`, but any other type of layers too. 
+For it to display something, you need to pass layers to the constructor. You can simply give a `L.TileLayer`, but any other type of layers too.
 
 Leaflet layer objets can't be shared between maps. So, __don't re-use layer objects already in use by the main map__. For example, if you want to use the same tile background on your main map and in the magnifying glass, you need to instantiate two different `L.TileLayer` objects:
 
@@ -88,9 +84,3 @@ License
 -------
 
 MIT.
-
-Authors
--------
-
-* [Benjamin Becquet](https://github.com/bbecquet)
-* [Mathieu Peltier](https://github.com/mpeltier)
