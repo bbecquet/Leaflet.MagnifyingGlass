@@ -108,7 +108,7 @@ L.MagnifyingGlass = L.Layer.extend({
 
     this._glassMap.whenReady(function() {
       if(opts.fixedPosition) {
-        this._mainMap.on('viewreset', this._updateFixed, this);
+        this._mainMap.on('zoomend', this._updateFixed, this);
         // for now, hide the elements during zoom transitions
         L.DomUtil.addClass(this._wrapperElt, ('leaflet-zoom-hide'));
       } else {
