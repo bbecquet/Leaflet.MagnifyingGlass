@@ -1,7 +1,7 @@
 function init() {
-  var tileUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png';
+  var tileUrl = 'http://b.tile.openstreetmap.org/{z}/{x}/{y}.png';
   var tileOptions = {
-    attribution: '&copy; MapQuest & <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
     subdomains: '1234'
   };
 
