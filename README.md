@@ -70,15 +70,13 @@ var magnifyingGlass = L.magnifyingGlass({
 | `fixedZoom`     | `Integer`   | `-1`      | If different than `-1`, defines a fixed zoom level to always use in the magnifying glass, ignoring the main map zoom and the `zoomOffet` value. |
 | `fixedPosition` | `Boolean`   | `false`   | If `true`, the magnifying glass will stay at the same position on the map, not following the mouse cursor. |
 | `latLng`        | `LatLng`    | `[0, 0]`  | The initial position of the magnifying glass, both on the main map and as the center of the magnified view. If `fixedPosition` is `true`, it will always keep this position. |
-| `layers`        | `ILayer[]`  | `[]`      | Set of layers to display in the magnified view. These layers  shouldn't be already added to a map instance (see note above). |
+| `layers`        | `ILayer[]`  | `[]`      | Set of layers to display in the magnified view. These layers shouldn't be already added to a map instance (see note above). |
 
 ### Methods
 
-_TODO_
-
-### Changing the look of the magnifying glass
-
-_TODO_
+| Method | Description |
+| ---    | ---         |
+| `getMap()` | Returns the `L.Map` instance used by the magnifying glass. You can use it for example to add/remove magnified layers on the fly. |
 
 License
 -------
