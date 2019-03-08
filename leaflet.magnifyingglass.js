@@ -7,7 +7,7 @@ L.MagnifyingGlass = L.Layer.extend({
     fixedPosition: false,
     latLng: [0, 0],
     fixedZoom: -1,
-    title: 'Show satellite glass'
+    title: 'Show glass'
   },
 
   initialize: function(options) {
@@ -21,7 +21,7 @@ L.MagnifyingGlass = L.Layer.extend({
   },
 
   linkToMap: function (map) {
-    
+
     var container;
     if (map.zoomControl) {
         container = map.zoomControl._container;
