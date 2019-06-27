@@ -6,7 +6,8 @@ L.MagnifyingGlass = L.Layer.extend({
     layers: [ ],
     fixedPosition: false,
     latLng: [0, 0],
-    fixedZoom: -1
+    fixedZoom: -1,
+    title: 'Show glass'
   },
 
   initialize: function(options) {
@@ -14,7 +15,45 @@ L.MagnifyingGlass = L.Layer.extend({
     this._fixedZoom = (this.options.fixedZoom != -1);
     this._mainMap = null;
     this._glassMap = null;
+
+    if (options.map)
+      this.linkToMap(options.map);
   },
+
+  linkToMap: function (map) {
+
+    var container;
+    if (map.zoomControl) {
+        container = map.zoomControl._container;
+    } else {
+        container = L.DomUtil.create('div', 'leaflet-bar');
+    }
+
+    this._createButton(this.options.title, container, function () {
+        if (map.hasLayer(this)) 
+            map.removeLayer(this);
+        else 
+            map.addLayer(this);
+    }, this); 
+
+    this.on('click', function () {
+        map.removeLayer(this);
+    });
+
+},
+
+_createButton: function (title, container, handler, context) {
+    this.link = L.DomUtil.create('a', 'leaflet-touch glass-icon', container);
+    this.link.href = '#';
+    this.link.title = title;
+
+    L.DomEvent
+        .addListener(this.link, 'click', L.DomEvent.stopPropagation)
+        .addListener(this.link, 'click', L.DomEvent.preventDefault)
+        .addListener(this.link, 'click', handler, context);
+
+    return this.link;
+},
 
   getMap: function(){
     return this._glassMap;
